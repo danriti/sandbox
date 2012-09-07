@@ -20,19 +20,6 @@ def support_jsonp(f):
             return f(*args, **kwargs)
     return decorated_function
 
-@app.route("/")
-def hello():
-    return "Hello World!"
-
-@app.route("/test")
-def test():
-    return request.remote_addr
-
-@app.route("/json", methods=['POST'])
-def json():
-    if request.method == 'POST':
-        return jsonify(request.json)
-
 @app.route("/get/password")
 @support_jsonp
 def password():

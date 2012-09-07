@@ -1,0 +1,4 @@
+# python specific
+*.pyc
+
+# general files to ignore
